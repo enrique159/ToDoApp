@@ -3,8 +3,14 @@
     <div id="contenedormini" class="container-lg">
       <div class="row justify-content-between">
         <h1 class="logotipo pt-1">TODO</h1>
-        <button id="btnTheme" type="button" class="btn btn-light">
-          <img src="@/assets/icon-moon.svg" alt="" />
+        <button
+          id="btnTheme"
+          type="button"
+          class="btn btn-light"
+          @click="cambiarModoOscuro"
+        >
+          <img src="@/assets/icon-moon.svg" alt="" v-if="obtenerModo" />
+          <img src="@/assets/icon-sun.svg" alt="" v-else />
         </button>
       </div>
       <div class="row pt-4">
@@ -23,9 +29,30 @@
 <script>
 import InputBar from "./InputBar.vue";
 import TodoList from "./TodoList.vue";
-import MenuXSOptions from './utilities/menuXSOptions.vue';
+import MenuXSOptions from "./utilities/menuXSOptions.vue";
+
 export default {
-  components: { InputBar, TodoList, MenuXSOptions },
+  data() {
+    return {
+      modoOscuro: this.$store.state.darkMode,
+    };
+  },
+  methods: {
+    cambiarModoOscuro() {
+      this.$store.state.darkMode = !this.$store.state.darkMode;
+      console.log(this.$store.state.darkMode);
+    },
+  },
+  computed: {
+    obtenerModo() {
+      return this.$store.state.darkMode;
+    },
+  },
+  components: {
+    InputBar,
+    TodoList,
+    MenuXSOptions,
+  },
 };
 </script>
 
@@ -63,6 +90,10 @@ $Very-Light-Gray: hsl(0, 0%, 98%);
       }
       img {
         height: 32px;
+      }
+      .fade-enter-active,
+      .fade-leave-active {
+        transition: opacity 0.5s;
       }
     }
     .logotipo {

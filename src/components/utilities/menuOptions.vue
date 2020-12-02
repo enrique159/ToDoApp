@@ -26,6 +26,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+$color-primario: #3a7bfd;
 $Very-Light-Gray: hsl(0, 0%, 98%);
 $Dark-Grayish-Blue: hsl(236, 9%, 61%);
 $Very-Dark-Grayis-Blue: hsl(235, 19%, 35%);
@@ -39,7 +40,7 @@ $Very-Dark-Grayis-Blue: hsl(235, 19%, 35%);
 }
 .btn-secondary:active,
 .btn-secondary.active {
-  color: blue !important;
+  color: $color-primario !important;
   background-color: transparent;
 }
 .btn-secondary:not(:disabled):not(.disabled).active{
@@ -47,7 +48,7 @@ $Very-Dark-Grayis-Blue: hsl(235, 19%, 35%);
 }
 .btn-secondary.not:active,
 .btn-secondary.not.active {
-  color: blue !important;
+  color: $color-primario !important;
   background-color: transparent;
 }
 .btn:focus,

@@ -1,5 +1,5 @@
 <template>
-  <div class="contenedor w-100">
+  <div :class="obtenerModo ? 'contenedor w-100' : 'contenedor-dark w-100'">
     <div class="row">
       <div class="col-1">
         <div class="checkCircle mr-3">
@@ -14,13 +14,28 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    obtenerModo() {
+      return this.$store.state.darkMode;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 $Very-Light-Gray: hsl(0, 0%, 98%);
 $Dark-Grayish-Blue: hsl(236, 9%, 61%);
 $Very-Dark-Grayis-Blue: hsl(235, 19%, 35%);
+
+//Dark-theme
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+$Very-Dark-Grayish-Blue2: rgb(36,39,60);
 
 .contenedor {
   background-color: $Very-Light-Gray;
@@ -42,6 +57,30 @@ $Very-Dark-Grayis-Blue: hsl(235, 19%, 35%);
     outline: none;
     &::placeholder {
       color: $Dark-Grayish-Blue;
+    }
+  }
+}
+
+.contenedor-dark {
+  background-color: $Very-Dark-Grayish-Blue2;
+  padding: 24px 36px;
+  border-radius: 6px;
+  .checkCircle {
+    .circle {
+      border-radius: 14px;
+      height: 28px;
+      width: 28px;
+      border: 2px #333333 solid;
+    }
+  }
+  #inputTODO {
+    color: $Light-Grayish-Blue;
+    background: none;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    &::placeholder {
+      color: $Very-Dark-Grayish-Blue;
     }
   }
 }

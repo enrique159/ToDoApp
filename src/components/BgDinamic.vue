@@ -1,9 +1,15 @@
 <template>
-  <div id="bg-dynamic" class="container-fluid bg-properties"></div>
+  <div :class="obtenerModo ? 'container-fluid bg-properties bg-dynamic' : 'container-fluid bg-properties bg-dynamic-dark'"></div>
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    obtenerModo() {
+      return this.$store.state.darkMode;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -15,8 +21,13 @@ $color-primario: #3a7bfd;
   background-size: cover;
 }
 
-#bg-dynamic {
+.bg-dynamic {
   background-image: url("~@/assets/bg-desktop-light.jpg");
+  height: 44vh;
+}
+
+.bg-dynamic-dark {
+  background-image: url("~@/assets/bg-desktop-dark.jpg");
   height: 44vh;
 }
 </style>
