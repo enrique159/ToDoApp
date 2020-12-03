@@ -46,10 +46,12 @@ $Very-Dark-Grayish-Blue2: hsl(237, 14%, 26%);
 .light {
   background-color: $Very-Light-Gray;
   height: 100vh;
+  transition: 0.4s;
 }
 .dark {
   background-color: $Very-Dark-Blue;
   height: 100vh;
+  transition: 0.4s;
 }
 
 #app {

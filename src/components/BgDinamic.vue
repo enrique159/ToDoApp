@@ -23,11 +23,13 @@ $color-primario: #3a7bfd;
 
 .bg-dynamic {
   background-image: url("~@/assets/bg-desktop-light.jpg");
+  transition: 0.4s;
   height: 44vh;
 }
 
 .bg-dynamic-dark {
   background-image: url("~@/assets/bg-desktop-dark.jpg");
+  transition: 0.4s;
   height: 44vh;
 }
 </style>
