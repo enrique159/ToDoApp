@@ -42,6 +42,15 @@ $Very-Dark-Grayis-Blue: hsl(235, 19%, 35%);
 .btn-secondary.active {
   color: $color-primario !important;
   background-color: transparent;
+  box-shadow: none;
+}
+.btn-secondary:hover,
+.btn-secondary.hover {
+  color: $Very-Dark-Grayis-Blue;
+  background-color: transparent;
+}
+.btn-secondary:not(:disabled):not(.disabled):active{
+  background-color: transparent;
 }
 .btn-secondary:not(:disabled):not(.disabled).active{
   background-color: transparent;
@@ -59,7 +68,5 @@ $Very-Dark-Grayis-Blue: hsl(235, 19%, 35%);
 .btn-secondary.focus {
   box-shadow: none;
 }
-.textOption {
-  color: $Dark-Grayish-Blue;
-}
+
 </style>

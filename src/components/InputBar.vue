@@ -7,7 +7,12 @@
         </div>
       </div>
       <div class="col-11">
-        <input type="text" id="inputTODO" placeholder="Create a new todo.." class="w-100" />
+        <input
+          type="text"
+          id="inputTODO"
+          placeholder="Create a new todo.."
+          class="ml-2 ml-md-0 pt-1 w-100"
+        />
       </div>
     </div>
   </div>
@@ -35,13 +40,17 @@ $Light-Grayish-Blue: hsl(234, 39%, 85%);
 $Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
 $Dark-Grayish-Blue: hsl(234, 11%, 52%);
 $Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-$Very-Dark-Grayish-Blue2: rgb(36,39,60);
+$Very-Dark-Grayish-Blue2: rgb(36, 39, 60);
 
 .contenedor {
   background-color: $Very-Light-Gray;
+  @media screen and (max-width: 560px) {
+    padding: 24px 24px;
+  }
   padding: 24px 36px;
   border-radius: 6px;
   .checkCircle {
+    padding-top: 1px;
     .circle {
       border-radius: 14px;
       height: 28px;
@@ -63,6 +72,9 @@ $Very-Dark-Grayish-Blue2: rgb(36,39,60);
 
 .contenedor-dark {
   background-color: $Very-Dark-Grayish-Blue2;
+  @media screen and (max-width: 560px) {
+    padding: 24px 24px;
+  }
   padding: 24px 36px;
   border-radius: 6px;
   .checkCircle {
