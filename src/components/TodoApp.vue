@@ -95,12 +95,21 @@ $Very-Light-Gray: hsl(0, 0%, 98%);
       .fade-leave-active {
         transition: opacity 0.5s;
       }
+      @media screen and (max-width: 560px) {
+        padding: 8px;
+        img {
+          height: 26px !important;
+        }
+      }
     }
     .logotipo {
       color: $Very-Light-Gray;
       font-size: 3em;
       font-weight: 700;
       letter-spacing: 0.8ch;
+      @media screen and (max-width: 560px) {
+        font-size: 2.2em
+      }
     }
   }
 }

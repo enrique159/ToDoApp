@@ -7,8 +7,8 @@
             <div class="circle rounded-circle"></div>
           </div>
         </div>
-        <div class="col-10 pt-1 ml-2 ml-md-0">
-          <span class="textList" role="button"> {{ item.texto }} </span>
+        <div class="col-9 col-sm-10 pt-1 ml-md-0">
+          <span class="textList ml-2" role="button"> {{ item.texto }} </span>
         </div>
         <div class="col-1">
           <img

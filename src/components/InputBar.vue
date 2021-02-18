@@ -6,12 +6,12 @@
           <div class="circle"></div>
         </div>
       </div>
-      <div class="col-11">
+      <div class="col-10 col-sm-11">
         <input
           type="text"
           id="inputTODO"
           placeholder="Create a new todo.."
-          class="ml-2 ml-md-0 pt-1 w-100"
+          class="pl-2 ml-md-0 pt-1 w-100"
         />
       </div>
     </div>
@@ -44,6 +44,7 @@ $Very-Dark-Grayish-Blue2: rgb(36, 39, 60);
 
 .contenedor {
   background-color: $Very-Light-Gray;
+  box-shadow: 0px 46px 100px 9px rgba(136, 136, 136, 0.38);
   @media screen and (max-width: 560px) {
     padding: 24px 24px;
   }
